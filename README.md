@@ -212,7 +212,7 @@ Use the Url `http://localhost:8080/`:
 
 ## 🛠 Future Enhancements
 
-- REST API for job submission
+- API with OAuth 
 - Real workers (email, PDF, etc.)
 - Dashboard UI for DLQ/job tracking
 - Docker/K8s deployment
