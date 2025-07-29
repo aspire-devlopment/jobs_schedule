@@ -66,15 +66,6 @@ func EnqueueJobHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func validateJob(job Job) error {
-	// Validate Type
-	validTypes := map[string]bool{
-		"send_email":      true,
-		"generate_report": true,
-		// Add more supported types
-	}
-	if !validTypes[job.Type] {
-		return fmt.Errorf("unsupported job type: %s", job.Type)
-	}
 
 	// Validate Payload is valid JSON
 	var payloadMap map[string]interface{}

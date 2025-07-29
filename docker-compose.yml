@@ -7,7 +7,7 @@ services:
   db:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
-      SA_PASSWORD: "useyourpassword ofssms"
+      SA_PASSWORD: "useyourpasswordofssms"
       ACCEPT_EULA: "Y"
       MSSQL_PID: "Express"
     ports:

@@ -8,9 +8,9 @@ import (
 )
 
 func main() {
-	// Initialize the error logger to write logs to the specified file
-
-	internal.InitLogger("logs/error.log")
+	// Initialize the  logger to write logs to the specified file
+	//this file is created at run time
+	internal.InitLogger("logs/allLogs.log")
 
 	// Start periodically loads pending jobs from the database
 	// and enqueues them into Redis every 2 minutes if pending queue present in db.
