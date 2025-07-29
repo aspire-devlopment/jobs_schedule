@@ -10,6 +10,6 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o distributed_job_scheduler
+RUN go build -o jobs_schedule
 
-CMD ["./distributed_job_scheduler"]
+CMD ["./jobs_schedule"]

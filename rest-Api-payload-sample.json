@@ -1,0 +1,62 @@
+[
+  {
+    "type": "send_email",
+    "payload": "{\"to\":\"user1@example.com\",\"subject\":\"Welcome!\"}",
+    "priority": "high",
+    "max_retries": 3
+  },
+  {
+    "type": "export_user_data",
+    "payload": "{\"userId\": 101, \"format\": \"PDF\"}",
+    "priority": "medium",
+    "max_retries": 2
+  },
+  {
+    "type": "process_payment",
+    "payload": "{\"orderId\": 98765, \"amount\": 150.75}",
+    "priority": "high",
+    "max_retries": 3
+  },
+  {
+    "type": "Notification",
+    "payload": "{\"userId\": 202, \"message\": \"You have a new message\"}",
+    "priority": "low",
+    "max_retries": 1
+  },
+  {
+    "type": "ReportGeneration",
+    "payload": "{\"reportType\": \"monthly\", \"year\": 2025, \"month\": 6}",
+    "priority": "medium",
+    "max_retries": 2
+  },
+  {
+    "type": "send_email",
+    "payload": "{\"to\":\"admin@company.com\",\"subject\":\"System Alert\"}",
+    "priority": "high",
+    "max_retries": 3
+  },
+  {
+    "type": "export_user_data",
+    "payload": "{\"userId\": 321, \"format\": \"CSV\"}",
+    "priority": "medium",
+    "max_retries": 2
+  },
+  {
+    "type": "process_payment",
+    "payload": "{\"orderId\": 55555, \"amount\": 20.00}",
+    "priority": "high",
+    "max_retries": 3
+  },
+  {
+    "type": "Notification",
+    "payload": "{\"userId\": 777, \"message\": \"Reminder: Complete your profile\"}",
+    "priority": "low",
+    "max_retries": 1
+  },
+  {
+    "type": "ReportGeneration",
+    "payload": "{\"reportType\": \"weekly\", \"week\": 30, \"year\": 2025}",
+    "priority": "medium",
+    "max_retries": 2
+  }
+]

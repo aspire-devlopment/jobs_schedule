@@ -95,7 +95,12 @@ func processJob(job *Job) error {
 	case "process_payment":
 		log.Println("Processing payment with payload:", job.Payload)
 		return nil // Indicate success
-
+	case "Notification":
+		log.Println("Sending Notification with payload:", job.Payload)
+		return nil // Indicate success
+	case "ReportGeneration":
+		log.Println("Generating Report with payload:", job.Payload)
+		return nil // Indicate success
 	default:
 		// Unknown job types return an error to trigger failure handling
 		return fmt.Errorf("unknown job type: %s", job.Type)
