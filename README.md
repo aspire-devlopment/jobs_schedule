@@ -103,11 +103,11 @@ go get github.com/google/uuid
 
 ### 🗂️ Priority Queues
 
-| Priority  | Value |
-|-----------|--------|
-| High      | 0     |
-| Medium    | 1     |
-| Low       | 2     |
+| Priority  |  
+|-----------|
+| High      | 
+| Medium    | 
+| Low       | 
 
 ### 🔁 Dequeue Logic (Pseudocode)
 
