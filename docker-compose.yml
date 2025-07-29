@@ -1,0 +1,37 @@
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "useyourpassword ofssms"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+
+  api:
+    build:
+      context: .
+    command: go run main.go
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+      - db
+
+  worker:
+    build:
+      context: .
+    command: go run internal/worker.go
+    depends_on:
+      - redis
+      - db
+    deploy:
+      mode: replicated
+      replicas: 5  # 🔁 Horizontal scaling (5 workers)
